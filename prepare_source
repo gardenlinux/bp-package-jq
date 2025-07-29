@@ -1,5 +1,5 @@
 pkg=jq
-version_orig=1.7.1-6
+version_orig=1.8.1-3
 version="$version_orig-0"
 git_src -b "debian/$version_orig" https://salsa.debian.org/debian/jq.git
 
