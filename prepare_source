@@ -1,18 +1,7 @@
 pkg=jq
 version_orig=1.8.1
-version="$version_orig-3"
+version="$version_orig-6"
+
 git_src -b "debian/$version" https://salsa.debian.org/debian/jq.git
 
-version_suffix=gl0+bp1877
-
-apply_patches debian_fixes
-
-
-tee $dir/src/debian/changelog << EOF
-jq (${version}${version_suffix}) unstable; urgency=medium
-
-  * Manually added patch https://github.com/jqlang/jq/commit/5e159b34b179417e3e0404108190a2ac7d65611c
-    (Fix GHSA-f946-j5j2-4w5m stack-overflow by limit regex parse depth, Fixes CVE-2025-48060)
-
- -- $maintainer <$email>
-EOF
+version_suffix=gl0~bp2150
